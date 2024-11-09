@@ -21,11 +21,11 @@ public class Main {
         list1.add("nam");
         list1.add("vu");
 
-        List<Integer>mapping=list1.stream().map(String::length).collect(Collectors.toList());
+        List<Integer>mapping=list1.stream().map(String::length).collect(Collectors.toList());  // chuyển đổi tham chiếu của 1 list sang kích thước của từng phần tử trong list và in ra 1 danh sách 
         double avg=list.stream().mapToInt(i->i).average().getAsDouble();
 int maxvalue=list.stream().mapToInt(i->i).max().getAsInt();
 int minvalue=list.stream().mapToInt(i->i).min().getAsInt();
-List<Integer> sochan=list.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+List<Integer> sochan=list.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());  // dùng toán tử lamda để lọc điều n theo điều kiện n%2==0 và đưa ra 1 list 
 List<Integer> dictint=list.stream().distinct().collect(Collectors.toList());
 System.out.println("Mapping:"+mapping);
 System.out.println("Dictint:"+dictint);
